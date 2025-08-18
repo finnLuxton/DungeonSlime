@@ -8,8 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2849eb6-f836-4191-8d99-cdb9a353f5af" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DungeonSlime/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DungeonSlime/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DungeonSlime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DungeonSlime.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DungeonSlime.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DungeonSlime.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755472875931</updated>
-      <workItem from="1755472877132" duration="7447000" />
+      <workItem from="1755472877132" duration="7787000" />
     </task>
     <servers />
   </component>
