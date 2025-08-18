@@ -6,9 +6,14 @@ namespace DungeonSlime;
 
 public class Game1 : Game
 {
+    // The GDM initializes and manages the connection to the graphics hardware.
     private GraphicsDeviceManager _graphics;
+    // Helper class for drawing text strings and sprites in one or more optimized batches.
     private SpriteBatch _spriteBatch;
 
+    // TODO - Look at updating template name to something more accurate once development is further along.
+    
+    // The separation of Game1() and Initialize() splits core systems and game specific initializations.
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -30,6 +35,7 @@ public class Game1 : Game
         // TODO: use this.Content to load your game content here
     }
 
+    // Documentation says that this functions get called 60 times per second by default.
     protected override void Update(GameTime gameTime)
     {
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
@@ -42,7 +48,7 @@ public class Game1 : Game
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
+        GraphicsDevice.Clear(Color.Silver);
 
         // TODO: Add your drawing code here
 
