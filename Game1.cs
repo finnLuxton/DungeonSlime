@@ -1,11 +1,14 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGameLibrary;
 
 namespace DungeonSlime;
 
-public class Game1 : Game
+//C3 Pop back into reasoning of Core
+public class Game1 : Core
 {
+    
     // The GDM initializes and manages the connection to the graphics hardware.
     private GraphicsDeviceManager _graphics;
     // Helper class for drawing text strings and sprites in one or more optimized batches.
@@ -14,11 +17,8 @@ public class Game1 : Game
     // TODO - Look at updating template name to something more accurate once development is further along.
     
     // The separation of Game1() and Initialize() splits core systems and game specific initializations.
-    public Game1()
+    public Game1() : base("Dungeon Slime", 1280, 720, false)
     {
-        _graphics = new GraphicsDeviceManager(this);
-        Content.RootDirectory = "Content";
-        IsMouseVisible = true;
     }
 
     protected override void Initialize()
@@ -30,7 +30,7 @@ public class Game1 : Game
 
     protected override void LoadContent()
     {
-        _spriteBatch = new SpriteBatch(GraphicsDevice);
+        base.LoadContent();
 
         // TODO: use this.Content to load your game content here
     }
