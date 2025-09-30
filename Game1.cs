@@ -8,12 +8,13 @@ namespace DungeonSlime;
 //C3 Pop back into reasoning of Core
 public class Game1 : Core
 {
-    
     // The GDM initializes and manages the connection to the graphics hardware.
     private GraphicsDeviceManager _graphics;
     // Helper class for drawing text strings and sprites in one or more optimized batches.
     private SpriteBatch _spriteBatch;
 
+    private Texture2D _logo;
+    
     // TODO - Look at updating template name to something more accurate once development is further along.
     
     // The separation of Game1() and Initialize() splits core systems and game specific initializations.
@@ -31,7 +32,7 @@ public class Game1 : Core
     protected override void LoadContent()
     {
         base.LoadContent();
-
+        _logo = Content.Load<Texture2D>("images/logo");
         // TODO: use this.Content to load your game content here
     }
 
@@ -52,6 +53,10 @@ public class Game1 : Core
 
         // TODO: Add your drawing code here
 
+        SpriteBatch.Begin();
+        SpriteBatch.Draw(_logo, Vector2.Zero, Color.White);
+        SpriteBatch.End();
+        
         base.Draw(gameTime);
     }
 }
