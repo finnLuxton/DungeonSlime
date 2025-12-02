@@ -57,6 +57,28 @@ public class TextureAtlas
             {
                 XDocument doc = XDocument.Load(reader);
                 XElement root = doc.Root;
+
+                string texturePath = root.Element("Texture").Value;
+                atlas.Texture = content.Load<Texture2D>(texturePath);
+
+                var regions = root.Element("Regions")?.Elements("Region");
+
+                if (regions != null)
+                {
+                    foreach (var region in regions)
+                    {
+                        string name = region.Attribute("name")?.Value;
+                        int x = int.Parse(region.Attribute("x")?.Value ?? "0");
+                        int y = int.Parse(region.Attribute("y")?.Value ?? "0");
+                        int width = int.Parse(region.Attribute("width")?.Value ?? "0");
+                        int height = int.Parse(region.Attribute("height")?.Value ?? "0");
+
+                        if (!string.IsNullOrEmpty(name))
+                        {
+                            atlas.AddRegion(name, x, y, width, height);
+                        }
+                    }
+                }
             }
         }
 
