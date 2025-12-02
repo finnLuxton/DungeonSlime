@@ -44,5 +44,23 @@ public class TextureAtlas
     {
         _regions.Clear();
     }
+
+    public static TextureAtlas FromFile(ContentManager content, string fileName)
+    {
+        TextureAtlas atlas = new TextureAtlas();
+        
+        string filepath = Path.Combine(content.RootDirectory, fileName);
+
+        using (Stream stream = TitleContainer.OpenStream(filepath))
+        {
+            using (XmlReader reader = XmlReader.Create(stream))
+            {
+                XDocument doc = XDocument.Load(reader);
+                XElement root = doc.Root;
+            }
+        }
+
+        return atlas;
+    }
     
 }
